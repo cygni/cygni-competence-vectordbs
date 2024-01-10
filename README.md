@@ -13,10 +13,14 @@ And a sequence diagram:
 sequenceDiagram
     actor User
     User->>Application: User Query
+    activate Infinity
     Application->>Infinity: Create Embedding of User Query
     Infinity-->>Application: Vector Embedding
+    deactivate Infinity
+    activate Chroma
     Application->>Chroma: Find nearest documents based on Vector Embedding
     Chroma-->>Application: Results
+    deactivate Chroma
     Application-)User: Results
 ```
 
