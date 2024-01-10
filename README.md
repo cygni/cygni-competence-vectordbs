@@ -14,7 +14,7 @@ sequenceDiagram
     actor User
     User->>Application: User Query
     Application->>Infinity: Create Embedding of User Query
-    Infinitiy-->>Application: Vector Embedding
+    Infinity-->>Application: Vector Embedding
     Application->>Chroma: Find nearest documents based on Vector Embedding
     Chroma-->>Application: Results
     Application-)User: Results
