@@ -128,7 +128,7 @@ It took 3:30 minutes on a Mac M1 Max to add all the books contents to the vector
 
 If you look at the code in [indexBooks.mjs](/indexBooks.mjs) you'll find that most of the code involves the parsing of PDF-files. When handling data from different sources and formats this can become quite a lot of code. 
 
-We're using [pdf2json](https://www.npmjs.com/package/pdf2json) that handles PDf parsing quite well. 
+We're using [pdf2json](https://www.npmjs.com/package/pdf2json) that handles PDF parsing quite well. 
 
 Since a full page of text can hold more than 256 words we need to "chunk" it up into smaller pieces. In the metadata we store a reference to the file, page and the chunk index like this:
 
