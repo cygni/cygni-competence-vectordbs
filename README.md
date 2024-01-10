@@ -78,10 +78,10 @@ What is the embedder? It is a function that is called by the ChromaClient to get
 The Chroma API can work with batches and in this example we add 20 documents per batch. 
 ```JavaScript
 await collection.upsert({
-        ids: ids,
-        metadatas: metadatas,
-        documents: documents
-      });
+    ids: ids,
+    metadatas: metadatas,
+    documents: documents
+    });
 ```
 
 The vector for each item is based on the contents of the corresponding item in the ```document``` array. Chroma expects a unique ID in string format and has the capability to store metadata as well. This is practical if you want to store extra information about the data. 
