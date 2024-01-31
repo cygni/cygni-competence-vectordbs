@@ -7,7 +7,7 @@ class SentenceTransformer {
 
     async generate(texts) {
         // do things to turn texts into embeddings with an api_key perhaps
-        const embeddings = await this.postApiData("http://0.0.0.0:8080/v1/embeddings", texts);
+        const embeddings = await this.postApiData("http://0.0.0.0:8080/embeddings", texts);
 
         // console.log(embeddings)
 
