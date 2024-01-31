@@ -158,6 +158,8 @@ ids.push(currentBook + '_p_' + pageNo + '_c_' + chunkIndex);
 - Extend [query.mjs](/query.mjs) so that it can return a more complete piece of text that could be used to send to a LLM chat as context.
     - For each of the top three items in the result, fetch the surrounding chunks and concatenate them to three larger pieces of text. Check out the client API for Chroma [here](https://docs.trychroma.com/reference/Collection)
 
+## A full RAG-example
+Tommy Wassgren has created a full RAG implementation about Digital Sustainability that indexes resources from the web. Check it out [here](https://github.com/cygni/carbonjovi)
 
 ## Prerequisites
 - Node >v21.4.0
