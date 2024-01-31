@@ -33,7 +33,7 @@ First, let's get all the parts running.
 1. Infinity
     - To generate the vector embeddings we need a language model and an application that can extract the vector. A very common library for this is called [SentenceTransformer](https://www.sbert.net/) which is implemented in Python. Another way is to use an online service to get the embeddings, for example [OpenAI's API](https://platform.openai.com/docs/guides/embeddings/what-are-embeddings). In this lab we'll use a self-hosted API called [Infinity](https://github.com/michaelfeil/infinity). The language model choosen for this lab is called [all-MiniLM-L6-v2](https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2) and is suitable for clustering or semantic search.
     - Start the Infinity API: 
-    - ```docker run -it -p 8080:8080 michaelf34/infinity:latest --model-name-or-path sentence-transformers/all-MiniLM-L6-v2 --port 8080```
+    - ```docker run -it -p 8080:8080 michaelf34/infinity:0.0.20 --model-name-or-path sentence-transformers/all-MiniLM-L6-v2 --port 8080```
     - Let's generate a vector embedding! Go to the [Swagger docs for the API](http://0.0.0.0:8080/docs#/default/_embeddings_v1_embeddings_post), click on "Try it out", add a sentence to the "input"-array and press "Execute.
     - ![Screenshot Infinity Swagger](/images/infinity-swagger.png)
     - You should get a response with a vector in 384 dimensions. 
