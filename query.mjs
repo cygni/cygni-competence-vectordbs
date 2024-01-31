@@ -15,6 +15,7 @@ const collection = await client.getCollection({
 
 const results = await collection.query({
   nResults: 10,
+  includeMetadata: true,
   queryTexts: ["What is the weather like in Jamaica?"],
 });
 

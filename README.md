@@ -42,7 +42,9 @@ First, let's get all the parts running.
     - Start Chroma in Docker:
     - ```docker run -p 8000:8000 chromadb/chroma```
     - Verify it is up an running by viewing the [FastAPI](http://0.0.0.0:8000/docs)
-
+1. Clone this repo and install dependencies
+    - ```git clone git@github.com:cygni/cygni-competence-vectordbs.git```
+    - ```cd cygni-competence-vectordbs && npm install```
 ## Lab 1
 Let's see how well the language model works and how to add records to Chroma by adding a subset of the [MS MARCO](https://microsoft.github.io/msmarco/) dataset. MS MARCO is is a question answering dataset featuring 100 000 real Bing questions and human generated answers. 
 
