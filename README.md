@@ -119,6 +119,7 @@ Try some different queries by editing [query.mjs](/query.mjs):
 - How well do the results match for more complicated and specific questions?
 - What are the results for questions not relevant to the current dataset?
 - What happens if you give a minimal query like "Jamaica" or "Hydrogen"?
+- If you search for Volvo which is never mentioned in the data set - what type of results do you get? Where does this knowledge come from?
 
 ## Lab 2
 
