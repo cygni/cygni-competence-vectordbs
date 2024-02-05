@@ -15,7 +15,7 @@ const collection = await client.getCollection({
 const results = await collection.query({
   nResults: 10,
   includeMetadata: true,
-  queryTexts: ["I would like to cook something with short ribs. What are some recipes?"],
+  queryTexts: ["I would like to cook something with short ribs. What are some recipes?"]
 });
 
 for (let i = results.ids[0].length-1; i >= 0 ; i--) {

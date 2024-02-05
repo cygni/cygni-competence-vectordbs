@@ -128,7 +128,8 @@ Let's see how well a Vector database manages more structured data. A couple of y
 The data contains the name of the recipe, its ingredients and a link to the web site that published the recipe. 
 
 First unzip the recipes:
-```cd recipes && unzip 20170107-061401-recipeitems.json.zip```
+```cd recipes && unzip 20170107-061401-recipeitems.json.zip && cd ..```
+
 Run: ```node indexRecipes.mjs```
 
 This will use the name of the recipe and its ingredients to build the vector embedding and store the rest of the data as metadata. The collection contains more than 170 000 recipes and it will take quite a while to add them all. You can stop the index process after adding a couple of thousand recipes. 
