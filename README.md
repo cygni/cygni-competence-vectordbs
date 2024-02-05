@@ -121,7 +121,28 @@ Try some different queries by editing [query.mjs](/query.mjs):
 - What happens if you give a minimal query like "Jamaica" or "Hydrogen"?
 - If you search for Volvo which is never mentioned in the data set - what type of results do you get? Where does this knowledge come from?
 
-## Lab 2
+## Lab 2 - Recipes
+
+Let's see how well a Vector database manages more structured data. A couple of years ago there was an initiative to create an [open database](https://github.com/fictivekin/openrecipes) of recipes, unfortunately it newer took of. But I managed to find a [copy](https://s3.amazonaws.com/openrecipes/20170107-061401-recipeitems.json.gz) of their collected data and placed it in [recipes](/recipes/).
+
+The data contains the name of the recipe, its ingredients and a link to the web site that published the recipe. 
+
+First unzip the recipes:
+```cd recipes && unzip 20170107-061401-recipeitems.json.zip```
+Run: ```node indexRecipes.mjs```
+
+This will use the name of the recipe and its ingredients to build the vector embedding and store the rest of the data as metadata. The collection contains more than 170 000 recipes and it will take quite a while to add them all. You can stop the index process after adding a couple of thousand recipes. 
+
+Run: ```node queryRecipes.mjs```
+
+### Exercise
+Try some different queries by editing [queryRecipes.mjs](/queryRecipes.mjs):
+- Try giving a list of ingredients that you would like to use. 
+- Try using common names such as poultry, seafood, or meat of a pig. How well does the model understand these words?
+- How would you construct a query that explicitly wants to exclude recipes that contain garlic?
+
+
+## Lab 3 - *R*AG
 
 In the use-case for [RAG](https://www.promptingguide.ai/techniques/rag) we typically store a knowledgebase in the Vector database and use the search results as input with the prompt to a LLM. 
 
