@@ -45,6 +45,7 @@ First, let's get all the parts running.
 1. Clone this repo and install dependencies
     - ```git clone git@github.com:cygni/cygni-competence-vectordbs.git```
     - ```cd cygni-competence-vectordbs && npm install```
+    - **Optional**. If you run NVM, ```nvm use```
 ## Lab 1
 Let's see how well the language model works and how to add records to Chroma by adding a subset of the [MS MARCO](https://microsoft.github.io/msmarco/) dataset. MS MARCO is is a question answering dataset featuring 100 000 real Bing questions and human generated answers. 
 
