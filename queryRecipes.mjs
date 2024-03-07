@@ -3,7 +3,7 @@ import SentenceTransformer from './sentence-transformer.mjs'
 
 const COLLECTION_RECIPES = 'recipes';
 //[WINDOWS] const client = new ChromaClient({path: 'http://localhost:<ANOTHER_PORT>'});
-const client = new ChromaClient()
+const client = new ChromaClient({path: 'http://localhost:8000'});
 const embedder = new SentenceTransformer('key-not-needed');
 
 

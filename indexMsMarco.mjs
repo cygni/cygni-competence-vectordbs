@@ -5,7 +5,7 @@ import readline from 'readline';
 
 const COLLECTION_NAME = 'msmarco';
 //[WINDOWS] const client = new ChromaClient({path: 'http://localhost:<ANOTHER_PORT>'});
-const client = new ChromaClient()
+const client = new ChromaClient({path: 'http://localhost:8000'});
 const embedder = new SentenceTransformer('key-not-needed');
 
 

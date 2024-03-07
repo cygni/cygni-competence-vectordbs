@@ -34,14 +34,14 @@ First, let's get all the parts running.
     - To generate the vector embeddings we need a language model and an application that can extract the vector. A very common library for this is called [SentenceTransformer](https://www.sbert.net/) which is implemented in Python. Another way is to use an online service to get the embeddings, for example [OpenAI's API](https://platform.openai.com/docs/guides/embeddings/what-are-embeddings). In this lab we'll use a self-hosted API called [Infinity](https://github.com/michaelfeil/infinity). The language model choosen for this lab is called [all-MiniLM-L6-v2](https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2) and is suitable for clustering or semantic search.
     - Start the Infinity API: 
     - ```docker run -it -p 8080:8080 michaelf34/infinity:0.0.20 --model-name-or-path sentence-transformers/all-MiniLM-L6-v2 --port 8080```
-    - Let's generate a vector embedding! Go to the [Swagger docs for the API](http://0.0.0.0:8080/docs#/default/_embeddings_v1_embeddings_post), click on "Try it out", add a sentence to the "input"-array and press "Execute.
+    - Let's generate a vector embedding! Go to the [Swagger docs for the API](http://localhost:8080/docs#/default/_embeddings_v1_embeddings_post), click on "Try it out", add a sentence to the "input"-array and press "Execute.
     - ![Screenshot Infinity Swagger](/images/infinity-swagger.png)
     - You should get a response with a vector in 384 dimensions. 
 1. Chroma
     - Chroma is a lightweight vector database that has a REST API and language bindings for Python and JavaScript. 
     - Start Chroma in Docker:
     - ```docker run -p 8000:8000 chromadb/chroma```
-    - Verify it is up an running by viewing the [FastAPI](http://0.0.0.0:8000/docs)
+    - Verify it is up an running by viewing the [FastAPI](http://localhost:8000/docs)
 	- [WINDOWS] For some windows machines, the port 8000 is already in use. To solve this, select another port ```docker run -p <ANOTHER_PORT>:8000 chromadb/chroma```
 	- [WINDOWS] Now verify that it by going to `http://localhost:<ANOTHER_PORT>/docs`.
 	- [WINDOWS] Changing the port also affects some of the scripts used later in the different labs. The relevant changes are marked as [WINDOWS] in the code.
