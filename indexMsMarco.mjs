@@ -4,7 +4,8 @@ import fs  from 'fs';
 import readline from 'readline';
 
 const COLLECTION_NAME = 'msmarco';
-const client = new ChromaClient();
+//[WINDOWS] const client = new ChromaClient({path: 'http://localhost:<ANOTHER_PORT>'});
+const client = new ChromaClient()
 const embedder = new SentenceTransformer('key-not-needed');
 
 

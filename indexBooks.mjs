@@ -4,7 +4,8 @@ import { ChromaClient } from 'chromadb'
 import SentenceTransformer from './sentence-transformer.mjs'
 
 const COLLECTION_NAME = 'devops-books';
-const client = new ChromaClient();
+//[WINDOWS] const client = new ChromaClient({path: 'http://localhost:<ANOTHER_PORT>'});
+const client = new ChromaClient()
 const embedder = new SentenceTransformer('key_not_needed');
 
 
