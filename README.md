@@ -42,7 +42,10 @@ First, let's get all the parts running.
     - Start Chroma in Docker:
     - ```docker run -p 8000:8000 chromadb/chroma```
     - Verify it is up an running by viewing the [FastAPI](http://0.0.0.0:8000/docs)
-1. Clone this repo and install dependencies
+	- [WINDOWS] For some windows machines, the port 8000 is already in use. To solve this, select another port ```docker run -p <ANOTHER_PORT>:8000 chromadb/chroma```
+	- [WINDOWS] Now verify that it by going to `http://localhost:<ANOTHER_PORT>/docs`.
+	- [WINDOWS] Changing the port also affects some of the scripts used later in the different labs. The relevant changes are marked as [WINDOWS] in the code.
+2. Clone this repo and install dependencies
     - ```git clone git@github.com:cygni/cygni-competence-vectordbs.git```
     - ```cd cygni-competence-vectordbs && npm install```
 ## Lab 1
